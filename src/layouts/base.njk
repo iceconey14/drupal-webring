@@ -4,23 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
+    <meta name="twitter:description" content="Webring for Drupal practitioners and enthusiasts.">
     <title>{{ title or meta.title }}</title>
-
     <link rel="stylesheet" href="{{ '/assets/styles/main.css' | url }}">
     <link type="application/atom+xml" rel="alternate" href="feeds.xml" title="{{ meta.title }}">
 </head>
 <body>
-    <div class="layout">
-        <main class="layout__primary">
-            <div class="layout__content">
-                {{ content | safe }}
-            </div>
-        </main>
-        <aside class="layout__secondary">
-            {% include 'map.njk' %}
-        </aside>
-    </div>
+    <main class="layout__primary">
+        <div class="layout__content">
+            {{ content | safe }}
+        </div>
+    </main>
 
     <a class="repolink" href="{{ meta.repo }}" title="View Source Code">
         <svg role="img" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -29,6 +23,3 @@
     </a>
 </body>
 </html>
-
-
-
